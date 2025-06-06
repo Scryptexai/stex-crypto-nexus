@@ -1,16 +1,24 @@
 
 {
-  "name": "risechain-bridge",
-  "version": "1.0.0",
-  "description": "ScryptexBridge contract for RiseChain - Production-grade cross-chain bridge",
+  "name": "risechain-bridge-modular",
+  "version": "2.0.0",
+  "description": "Modular Bridge System for RiseChain - Production-grade cross-chain infrastructure",
   "scripts": {
     "compile": "hardhat compile",
     "test": "hardhat test",
-    "deploy": "hardhat run scripts/deploy.js --network riseTestnet",
-    "verify": "hardhat verify --network riseTestnet",
+    "deploy:bridge": "hardhat run scripts/deploy-bridge.js --network riseTestnet",
+    "verify:all": "npm run verify:core && npm run verify:receiver && npm run verify:router && npm run verify:validator && npm run verify:treasury && npm run verify:points",
+    "verify:core": "hardhat verify --network riseTestnet",
+    "verify:receiver": "hardhat verify --network riseTestnet", 
+    "verify:router": "hardhat verify --network riseTestnet",
+    "verify:validator": "hardhat verify --network riseTestnet",
+    "verify:treasury": "hardhat verify --network riseTestnet",
+    "verify:points": "hardhat verify --network riseTestnet",
     "coverage": "hardhat coverage",
     "lint": "solhint 'contracts/**/*.sol'",
-    "size": "hardhat size-contracts"
+    "size": "hardhat size-contracts",
+    "test:integration": "hardhat test test/integration/",
+    "test:unit": "hardhat test test/unit/"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.9.3",
@@ -27,7 +35,9 @@
     "solhint": "^3.6.2",
     "solidity-coverage": "^0.8.4",
     "dotenv": "^16.3.1",
-    "ethers": "^6.7.1"
+    "ethers": "^6.7.1",
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
   },
   "keywords": [
     "blockchain",
@@ -35,9 +45,13 @@
     "cross-chain",
     "risechain",
     "defi",
-    "ethereum",
+    "modular",
+    "production",
     "solidity"
   ],
   "author": "Scryptex Team",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  }
 }
