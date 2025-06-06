@@ -1,0 +1,54 @@
+
+{
+  "name": "risechain-token-creator",
+  "version": "1.0.0",
+  "description": "Token Creation System for RiseChain - Seamless token deployment with bonding curves",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:token-creator": "hardhat run scripts/deploy-token-creator.js --network riseTestnet",
+    "verify:all": "npm run verify:factory && npm run verify:template && npm run verify:graduation",
+    "verify:factory": "hardhat verify --network riseTestnet",
+    "verify:template": "hardhat verify --network riseTestnet",
+    "verify:graduation": "hardhat verify --network riseTestnet",
+    "coverage": "hardhat coverage",
+    "lint": "solhint 'contracts/**/*.sol'",
+    "size": "hardhat size-contracts",
+    "test:integration": "hardhat test test/integration/",
+    "test:unit": "hardhat test test/unit/"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.3",
+    "@openzeppelin/contracts-upgradeable": "^4.9.3"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.2",
+    "@nomicfoundation/hardhat-verify": "^1.1.1",
+    "@typechain/ethers-v6": "^0.4.3",
+    "@typechain/hardhat": "^8.0.3",
+    "hardhat": "^2.17.1",
+    "hardhat-contract-sizer": "^2.10.0",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solhint": "^3.6.2",
+    "solidity-coverage": "^0.8.4",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.7.1",
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  },
+  "keywords": [
+    "blockchain",
+    "token-creation",
+    "factory",
+    "bonding-curve",
+    "risechain",
+    "defi",
+    "pump-fun",
+    "solidity"
+  ],
+  "author": "Scryptex Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

@@ -1,0 +1,57 @@
+
+{
+  "name": "megaeth-trading-system",
+  "version": "1.0.0",
+  "description": "Advanced Trading System for MegaETH - Real-time trading with 10ms blocks",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:trading": "hardhat run scripts/deploy-trading.js --network megaTestnet",
+    "verify:all": "npm run verify:trading && npm run verify:bonding && npm run verify:listing && npm run verify:social",
+    "verify:trading": "hardhat verify --network megaTestnet",
+    "verify:bonding": "hardhat verify --network megaTestnet",
+    "verify:listing": "hardhat verify --network megaTestnet",
+    "verify:social": "hardhat verify --network megaTestnet",
+    "coverage": "hardhat coverage",
+    "lint": "solhint 'contracts/**/*.sol'",
+    "size": "hardhat size-contracts",
+    "test:integration": "hardhat test test/integration/",
+    "test:unit": "hardhat test test/unit/"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.3",
+    "@openzeppelin/contracts-upgradeable": "^4.9.3"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.2",
+    "@nomicfoundation/hardhat-verify": "^1.1.1",
+    "@typechain/ethers-v6": "^0.4.3",
+    "@typechain/hardhat": "^8.0.3",
+    "hardhat": "^2.17.1",
+    "hardhat-contract-sizer": "^2.10.0",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solhint": "^3.6.2",
+    "solidity-coverage": "^0.8.4",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.7.1",
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  },
+  "keywords": [
+    "blockchain",
+    "trading",
+    "dex",
+    "bonding-curve",
+    "social-trading",
+    "megaeth",
+    "real-time",
+    "defi",
+    "pump-fun",
+    "solidity"
+  ],
+  "author": "Scryptex Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
