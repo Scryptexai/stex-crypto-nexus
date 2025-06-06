@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, ArrowUpDown, Plus, Sun, Bridge } from 'lucide-react';
+import { Home, ArrowUpDown, Plus, Sun, GitBridge } from 'lucide-react';
 
 const BottomNavigation: React.FC = () => {
   const location = useLocation();
@@ -11,7 +11,7 @@ const BottomNavigation: React.FC = () => {
     { path: '/swap', icon: ArrowUpDown, label: 'Swap' },
     { path: '/create', icon: Plus, label: 'Create' },
     { path: '/gm', icon: Sun, label: 'GM' },
-    { path: '/bridge', icon: Bridge, label: 'Bridge' }
+    { path: '/bridge', icon: GitBridge, label: 'Bridge' }
   ];
 
   return (
