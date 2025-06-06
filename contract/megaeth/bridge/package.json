@@ -1,0 +1,45 @@
+
+{
+  "name": "megaeth-bridge",
+  "version": "1.0.0",
+  "description": "ScryptexBridge contract for MegaETH - Real-time cross-chain bridge with mini-block support",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.js --network megaTestnet",
+    "verify": "hardhat verify --network megaTestnet",
+    "coverage": "hardhat coverage",
+    "lint": "solhint 'contracts/**/*.sol'",
+    "size": "hardhat size-contracts"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.3",
+    "@openzeppelin/contracts-upgradeable": "^4.9.3"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.2",
+    "@nomicfoundation/hardhat-verify": "^1.1.1",
+    "@typechain/ethers-v6": "^0.4.3",
+    "@typechain/hardhat": "^8.0.3",
+    "hardhat": "^2.17.1",
+    "hardhat-contract-sizer": "^2.10.0",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solhint": "^3.6.2",
+    "solidity-coverage": "^0.8.4",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.7.1"
+  },
+  "keywords": [
+    "blockchain",
+    "bridge",
+    "cross-chain",
+    "megaeth",
+    "real-time",
+    "mini-blocks",
+    "defi",
+    "ethereum",
+    "solidity"
+  ],
+  "author": "Scryptex Team",
+  "license": "MIT"
+}
