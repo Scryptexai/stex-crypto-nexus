@@ -1,0 +1,35 @@
+
+[
+  {
+    "type": "function",
+    "name": "buyTokens",
+    "inputs": [
+      {"name": "_token", "type": "address", "internalType": "address"},
+      {"name": "_maxSlippage", "type": "uint256", "internalType": "uint256"}
+    ],
+    "outputs": [],
+    "stateMutability": "payable"
+  },
+  {
+    "type": "function",
+    "name": "sellTokens",
+    "inputs": [
+      {"name": "_token", "type": "address", "internalType": "address"},
+      {"name": "_amount", "type": "uint256", "internalType": "uint256"},
+      {"name": "_maxSlippage", "type": "uint256", "internalType": "uint256"}
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "event",
+    "name": "TradeExecuted",
+    "inputs": [
+      {"name": "token", "type": "address", "indexed": true, "internalType": "address"},
+      {"name": "trader", "type": "address", "indexed": true, "internalType": "address"},
+      {"name": "amount", "type": "uint256", "indexed": false, "internalType": "uint256"},
+      {"name": "isBuy", "type": "bool", "indexed": false, "internalType": "bool"}
+    ],
+    "anonymous": false
+  }
+]

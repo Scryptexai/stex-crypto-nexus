@@ -1,0 +1,44 @@
+
+[
+  {
+    "type": "constructor",
+    "inputs": [
+      {"name": "_validators", "type": "address[]", "internalType": "address[]"},
+      {"name": "_threshold", "type": "uint256", "internalType": "uint256"}
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "deposit",
+    "inputs": [
+      {"name": "_destinationChain", "type": "uint256", "internalType": "uint256"},
+      {"name": "_recipient", "type": "address", "internalType": "address"},
+      {"name": "_token", "type": "address", "internalType": "address"},
+      {"name": "_amount", "type": "uint256", "internalType": "uint256"}
+    ],
+    "outputs": [],
+    "stateMutability": "payable"
+  },
+  {
+    "type": "function",
+    "name": "withdraw",
+    "inputs": [
+      {"name": "_txHash", "type": "bytes32", "internalType": "bytes32"},
+      {"name": "_signatures", "type": "bytes[]", "internalType": "bytes[]"}
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "event",
+    "name": "Deposit",
+    "inputs": [
+      {"name": "user", "type": "address", "indexed": true, "internalType": "address"},
+      {"name": "destinationChain", "type": "uint256", "indexed": true, "internalType": "uint256"},
+      {"name": "amount", "type": "uint256", "indexed": false, "internalType": "uint256"},
+      {"name": "txHash", "type": "bytes32", "indexed": false, "internalType": "bytes32"}
+    ],
+    "anonymous": false
+  }
+]
